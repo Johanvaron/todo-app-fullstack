@@ -2,6 +2,8 @@ import { TaskService } from '../services/TaskService';
 import { taskModel } from '../models/TaskModel';
 import { Task } from '../types';
 
+import { beforeEach, describe, expect, it, type jest } from '@jest/globals';
+
 // Mock the TaskModel
 jest.mock('../models/TaskModel');
 const mockTaskModel = taskModel as jest.Mocked<typeof taskModel>;
