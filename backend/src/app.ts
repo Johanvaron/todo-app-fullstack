@@ -68,13 +68,18 @@ class App {
     this.app.use(errorHandler);
   }
 
-  public listen(): void {
-    this.app.listen(this.port, () => {
-      logger.info(`Server running on port ${this.port}`);
-      logger.info(`Environment: ${process.env.NODE_ENV || 'development'}`);
-      logger.info(`API Documentation available at http://localhost:${this.port}/api`);
-    });
-  }
+ public listen(): void {
+  this.app.listen(this.port, () => {
+    const env = process.env.NODE_ENV || 'development';
+    const url = `http://localhost:${this.port}/api`;
+
+    logger.info('🚀 Server is up and running!');
+    logger.info(`🌐 Environment: ${env}`);
+    logger.info(`📡 Listening on port: ${this.port}`);
+    logger.info(`📚 API Docs: ${url}`);
+  });
+}
+
 }
 
 export default App;

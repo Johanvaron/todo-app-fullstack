@@ -1,0 +1,12 @@
+[
+  {
+    "id": "9123efff-11a8-49f5-ab50-dc7ddb92179b",
+    "title": "Completar proyecto de React",
+    "description": "Terminar el desarrollo del componente de dashboard",
+    "completed": false,
+    "priority": "high",
+    "dueDate": "2025-06-10T18:00:00.000Z",
+    "createdAt": "2025-06-05T02:27:36.007Z",
+    "updatedAt": "2025-06-05T02:27:36.007Z"
+  }
+]
