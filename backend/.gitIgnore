@@ -1,33 +1,48 @@
-# node modules
+# Dependencies
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Logs
-logs
+logs/
 *.log
-npm-debug.log*
 
-# Entornos
-.env
-.env.*
+# Data files
 
-# Directorios del sistema operativo
-.DS_Store
-Thumbs.db
 
-# Editor/IDE configs
+# IDE files
 .vscode/
 .idea/
 *.swp
+*.swo
 
-# Coverage reports
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
 coverage/
-*.lcov
+.nyc_output/
 
-# Dependencias opcionales (si usas yarn o pnpm)
-yarn-error.log
-yarn.lock
-pnpm-lock.yaml
-
-# Build output
-dist/
-build/
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
