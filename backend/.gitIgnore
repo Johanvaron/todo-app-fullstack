@@ -1,0 +1,33 @@
+# node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Entornos
+.env
+.env.*
+
+# Directorios del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editor/IDE configs
+.vscode/
+.idea/
+*.swp
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Dependencias opcionales (si usas yarn o pnpm)
+yarn-error.log
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+dist/
+build/
