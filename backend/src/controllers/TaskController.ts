@@ -4,7 +4,9 @@ import { ApiResponse, PaginatedResponse, Task } from '../types';
 import { CreateTaskInput, UpdateTaskInput, TaskFiltersInput } from '../utils/validation';
 import logger from '../utils/logger';
 
-export class TaskController {  async getTasks(req: Request, res: Response<PaginatedResponse<Task>>): Promise<void> {
+export class TaskController {  
+  
+  async getTasks(req: Request, res: Response<PaginatedResponse<Task>>): Promise<void> {
     try {
       const filters = req.query as unknown as TaskFiltersInput;
       const { page, limit, ...taskFilters } = filters;
