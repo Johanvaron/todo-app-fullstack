@@ -10,8 +10,13 @@ const routes = [
   },
   {
     path: '/tasks',
-    name: 'Task',
-    component: Task,
+    name: 'Tasks',
+    component: Task, // Fixed: Using Task component for tasks list
+  },
+  {
+    path: '/task/:id',
+    name: 'TaskDetail',
+    component: Task, // Individual task detail can use the same component with different logic
   },
 ];
 
