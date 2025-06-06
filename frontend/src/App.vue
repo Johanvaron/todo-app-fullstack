@@ -1,24 +1,23 @@
 <template>
-  <div id="app">
+  <div>
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/tasks">Tasks</router-link>
+    </nav>
     <router-view />
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'App',
-});
+<script setup>
+// No se necesita lógica aquí para este ejemplo
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+nav {
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+a {
+  margin-right: 10px;
 }
 </style>

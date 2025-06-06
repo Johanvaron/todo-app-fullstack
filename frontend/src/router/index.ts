@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/views/home.vue';
-import Tasks from '@/views/task.vue';
+import Task from '@/views/task.vue';
 
 const routes = [
   {
@@ -10,13 +10,13 @@ const routes = [
   },
   {
     path: '/tasks',
-    name: 'Tasks',
-    component: Tasks,
+    name: 'Task',
+    component: Task,
   },
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
   routes,
 });
 
