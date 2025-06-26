@@ -8,8 +8,10 @@ export class TaskController {
   
   async getTasks(req: Request, res: Response<PaginatedResponse<Task>>): Promise<void> {
     try {
-      const filters = req.query as unknown as TaskFiltersInput;
-      const { page, limit, ...taskFilters } = filters;
+      const query = req.query || {};
+      const page = query.page ? Number(query.page) : 1;
+      const limit = query.limit ? Number(query.limit) : 10;
+      const { page: _p, limit: _l, ...taskFilters } = query as any;
       
       const result = await taskService.getAllTasks(taskFilters, page, limit);
       

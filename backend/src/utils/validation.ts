@@ -21,9 +21,9 @@ export const TaskFiltersSchema = z.object({
   search: z.string().optional(),
   dueDateFrom: z.string().datetime().optional(),
   dueDateTo: z.string().datetime().optional(),
-  page: z.string().transform(val => parseInt(val, 10)).default('1'),
-  limit: z.string().transform(val => parseInt(val, 10)).default('10')
-});
+  page: z.string().transform(val => parseInt(val, 10) || 1).optional(),
+  limit: z.string().transform(val => parseInt(val, 10) || 10).optional()
+}).optional();
 
 export const TaskIdSchema = z.object({
   id: z.string().uuid('Invalid task ID format')
